@@ -20,7 +20,7 @@ class HouseController extends Controller
 
     public function create()
     {
-        return view('courses.create');
+        return view('houses.create');
     }
 
     public function store(Request $request)
@@ -30,7 +30,7 @@ class HouseController extends Controller
             'locationName'=>'required|min:2|max:128',
             'numberOfRooms'=>'required',
             'numberOfBeds'=>'required',
-            'type'=>'required',
+            'houseType'=>'required',
         );
 
         $validator = Validator::make($request->all(),$rules);
@@ -43,7 +43,7 @@ class HouseController extends Controller
                 'locationName'=> $request->get('locationName'),
                 'numberOfRooms'=> $request->get('numberOfRooms'),
                 'numberOfBeds'=> $request->get('numberOfBeds'),
-                'type'=> $request->get('type'),
+                'houseType'=> $request->get('houseType'),
             ]};
 
             $house->save();
@@ -72,7 +72,7 @@ class HouseController extends Controller
         $house->locationName = $request->get('locationName');
         $house->numberOfRooms = $request->get('numberOfRooms');
         $house->numberOfBeds = $request->get('numberOfBeds');
-        $house->type = $request->get('type');
+        $house->houseType = $request->get('houseType');
         $house->save();
         return redirect('houses')->with('success', 'Task was successful!');
     }
