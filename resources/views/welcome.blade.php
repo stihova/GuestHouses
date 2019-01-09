@@ -45,14 +45,16 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 94px;
+                text-shadow: 3px 2px gray;
+                font-family: Tahoma, Geneva, sans-serif;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #333333;
                 padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
+                font-size: 15px;
+                font-weight: 1000;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -61,9 +63,28 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .hero-image {
+                background-image: url("https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjFsqyYp-HfAhVHqIsKHWIbAHwQjRx6BAgBEAU&url=https%3A%2F%2Fluxuryhotelawards.com%2F&psig=AOvVaw3ckOjFddIgK8ETsr1a3QkE&ust=1547144084900794");
+                background-color: #dd99ff;
+                height: 500px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+
+            .hero-text {
+                color: white;
+            }
+
         </style>
     </head>
     <body>
+
+    <div class="hero-image">
+        <div class="hero-text">
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -81,7 +102,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Guest Houses
                 </div>
 
                 <div class="links">
@@ -94,5 +115,9 @@
                 </div>
             </div>
         </div>
+
+        </div>
+    </div>
+
     </body>
 </html>
