@@ -69,7 +69,7 @@
             <strong>Location name:</strong>
         </td>
         <td>
-            {{ $house->locationName }}
+            {{ $location->locationName }}
         </td>
     </tr>
 </table>
