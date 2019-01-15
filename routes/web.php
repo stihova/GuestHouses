@@ -17,4 +17,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::resource('/houses', 'HouseController');
+Route::resource('/locations', 'LocationController');
+Route::resource('/types', 'TypeController');
+
+Route::resource('/images','ImageController');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('houses.search','SearchController@searchHouses');
+Route::post('locations.search','SearchController@searchLocations');
+Route::post('types.search','SearchController@searchTypes');
+
+

@@ -15,7 +15,7 @@ class TypeController extends Controller
         $typeModel = new Type();
         $alltype = $typeModel::all();
 
-        return view('type.index')->with('types', $alltype);
+        return view('types.index')->with('types', $alltype);
     }
 
     public function create()
@@ -34,9 +34,9 @@ class TypeController extends Controller
         if($validator->fails()){
             return redirect('types/create')->WithErrors($validator);
         }else{
-            $type = new Type{[
+            $type = new Type([
                 'houseType'=> $request->get('houseType'),
-            ]};
+            ]);
 
             $type->save();
             return redirect('types');

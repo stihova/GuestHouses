@@ -106,12 +106,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://facebook.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/houses">Houses</a>
+                    <a href="/locations">Locations</a>
+                    <a href="/types">House Types</a>
+                    <a href="/images">Image</a>
                 </div>
             </div>
         </div>

@@ -1,10 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: User6ycee
- * Date: 9.1.2019 г.
- * Time: 22:15
- */@extends('layouts.app')
+@extends('layouts.app')
+@section('content')
         <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -85,3 +80,4 @@
 
 </body>
 </html>
+@endsection

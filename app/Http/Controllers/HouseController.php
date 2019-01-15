@@ -38,13 +38,13 @@ class HouseController extends Controller
         if($validator->fails()){
             return redirect('houses/create')->WithErrors($validator);
         }else{
-            $house = new House{[
+            $house = new House([
                 'houseName'=> $request->get('houseName'),
                 'locationName'=> $request->get('locationName'),
                 'numberOfRooms'=> $request->get('numberOfRooms'),
                 'numberOfBeds'=> $request->get('numberOfBeds'),
                 'houseType'=> $request->get('houseType'),
-            ]};
+            ]);
 
             $house->save();
             return redirect('houses');

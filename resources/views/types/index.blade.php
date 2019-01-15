@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('content')
         <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -80,7 +81,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach($theatres as $key => $value)
+    @foreach($types as $key => $value)
         <tr>
             <td>{{$value->id}}</td>
             <td>{{$value->houseType}}</td>
@@ -105,3 +106,4 @@
 
 </body>
 </html>
+@endsection

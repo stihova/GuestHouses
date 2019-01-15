@@ -15,7 +15,7 @@ class LocationController extends Controller
         $locationModel = new Location();
         $alllocation = $locationModel::all();
 
-        return view('location.index')->with('locations', $alllocation);
+        return view('locations.index')->with('locations', $alllocation);
     }
 
     public function create()
@@ -34,9 +34,9 @@ class LocationController extends Controller
         if($validator->fails()){
             return redirect('locations/create')->WithErrors($validator);
         }else{
-            $location = new Location{[
+            $location = new Location([
                 'locationName'=> $request->get('locationName'),
-            ]};
+            ]);
 
             $location->save();
             return redirect('locations');
