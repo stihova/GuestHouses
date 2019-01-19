@@ -14,11 +14,13 @@ class CreateHousesTable extends Migration
     public function up()
     {
         Schema::create('houses', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id')
+            ->unsigned()->nullable()->default('NULL');
             $table->string('houseName','128');
             $table->string('locationName', '128');
             $table->integer('numberOfRooms');
             $table->integer('numberOfBeds');
+            Schema::
             $table->string('houseType', '128');
             $table->timestamps();
         });
