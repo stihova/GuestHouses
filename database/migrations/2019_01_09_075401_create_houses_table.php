@@ -20,7 +20,7 @@ class CreateHousesTable extends Migration
             $table->string('locationName', '128');
             $table->integer('numberOfRooms');
             $table->integer('numberOfBeds');
-            Schema::
+            Schema::disableForeignKeyConstraints();
             $table->string('houseType', '128');
             $table->timestamps();
         });
