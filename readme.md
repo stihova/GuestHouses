@@ -9,24 +9,24 @@
 - Search Controller
 
 2. Models:
-2.1. House
+- House
     - fields to fill in:
         - houseName
         - locationName
         - numberOfRooms
         - numberOfBeds
         - houseType
-2.2 Location
+- Location
     - fields to fill in:
         - locationName
-2.3. Type
+- Type
     - fields to fill in:
         - houseType
-2.4. Image
+- Image
     - fields to fill in:
         - fileName
         - imageDescription
-2.5. User
+- User
     - fields to fill in:
         - name
         - email
@@ -36,14 +36,14 @@
         - remember_token
     
 3. Views:
-3.1. auth
+- auth
     -password
         - email
         - reset
     -login
     -register
     -verify
-3.2. houses
+- houses
     - create
         Create new house filling the fields houseName, locationName, numberOfRooms, numberOfBeds and houseType and add the new house in         the list of all houses
     - index
@@ -56,13 +56,13 @@
         Searching house of all houses
     We've got the opportunity to delete a choosen house and the information about it
 
-3.3. images
+- images
     - create
         Add new image and give it a name
     - index
         Show the list of all images
 
-3.4. locations
+- locations
     - create
         Create new location filling the field locationName and add the new location in the list of all locations
     - index
@@ -73,7 +73,7 @@
         Show only the information about the current location
     We've got the opportunity to delete a choosen location and the information about it
 
-3.5. types
+- types
     - create
         Create new house type filling the field houseType and add the new type in the list of all types
     - index
