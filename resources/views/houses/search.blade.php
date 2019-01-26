@@ -18,27 +18,22 @@
             height: 100vh;
             margin: 0;
         }
-
         .full-height {
             height: 100vh;
         }
-
         .flex-center {
             align-items: center;
             display: flex;
             justify-content: center;
         }
-
         .position-ref {
             position: relative;
         }
-
         .top-right {
             position: absolute;
             right: 10px;
             top: 18px;
         }
-
         .links > a {
             padding: 0 25px;
             font-size: 13px;
@@ -47,37 +42,44 @@
             text-decoration: none;
             text-transform: uppercase;
         }
-
     </style>
 </head>
 <body>
-<h1>Edit</h1>
-<div class="panel-body">
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <form method="post" action="{{action('LocationController@update' , $id )}}">
-        <div class="form-group row">
-            {{csrf_field()}}
-            <label for="locationName" class="col-sm-2 col-form-label col-form-label-lg">Location Name</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" placeholder="Enter location:" name="locationName" value="{{$location->locationName}}">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-2"></div>
-            <button type="submit" class="btn-outline-dark">Update</button>
-        </div>
-    </form>
+<div class="container">
+    @if(isset($details))
+        <p style="font-size: 25px;" class="text-center"> Your search results are :</p>
+        <h2>House Details</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>House Name</th>
+                <th>Location Name</th>
+                <th>Number Of Rooms</th>
+                <th>Number Of Beds</th>
+                <th>House Type</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($details as $house)
+                <tr>
+                    <td>{{$house->houseName}}</td>
+                    <td>{{$house->locationName}}</td>
+                    <td>{{$house->numberOfRooms}}</td>
+                    <td>{{$house->numberOfBeds}}</td>
+                    <td>{{$house->houseType}}</td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
 </div>
-
-
+@elseif(isset($message))
+    <h1>{{$message}}</h1>
+@endif
+<div class="form-group row">
+    <div class="col-xl-1"></div>
+    <a class="btn btn-primary" href="{{ route('houses.index') }}"> Back</a>
+</div>
 </body>
 </html>
 @endsection

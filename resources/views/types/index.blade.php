@@ -55,23 +55,7 @@
     <a class="btn btn-small btn-info" href="{{ URL::to('types/create') }}">Create a House Type</a>
 </div>
 <br>
-<form action="{{action("SearchController@searchTypes")}}" method="POST" role="search">
-    {{ csrf_field() }}
-    <div class="input-group">
-        <input type="text" class="form-control" name="search"
-               placeholder="Search a location"> <span class="input-group-btn">
-            <button type="submit" class="btn btn-default">
-                <span class="glyphicon glyphicon-search">Search</span>
-            </button>
-        </span>
-    </div>
-</form>
-<br>
-<td>
-    @if (Auth::check())
-        <a class="btn btn-small btn-info" href="{{ URL::to('images') }}"> <span>Images</span></a>
-    @endif
-</td>
+
 <table class="table-bordered">
     <thead class="thead-dark">
     <tr>
