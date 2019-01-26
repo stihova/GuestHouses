@@ -1,90 +1,90 @@
-<p align="center">gues-houses-system</p>
+<p align="center">Gues Houses System</p>
 <p align="center">University PHP Frameworks - Laravel project</p>
 
-Controllers:
+1. Controllers:
 - House Controller
 - Location Controller
 - Type Controller
 - Image Controller
 - Search Controller
 
-Models:
-- House
-    -- fields to fill in:
-        --- houseName
-        --- locationName
-        --- numberOfRooms
-        --- numberOfBeds
-        --- houseType
-- Location
-    -- fields to fill in:
-        --- locationName
-- Type
-    -- fields to fill in:
-        --- houseType
-- Image
-    -- fields to fill in:
-        --- fileName
-        --- imageDescription
-- User
-    -- fields to fill in:
-        --- name
-        --- email
-        --- password
-    -- hidden fields:
-        --- password
-        --- remember_token
+2. Models:
+2.1. House
+    - fields to fill in:
+        - houseName
+        - locationName
+        - numberOfRooms
+        - numberOfBeds
+        - houseType
+2.2 Location
+    - fields to fill in:
+        - locationName
+2.3. Type
+    - fields to fill in:
+        - houseType
+2.4. Image
+    - fields to fill in:
+        - fileName
+        - imageDescription
+2.5. User
+    - fields to fill in:
+        - name
+        - email
+        - password
+    - hidden fields:
+        - password
+        - remember_token
     
-Views:
-- auth
+3. Views:
+3.1. auth
     -password
-        -- email
-        -- reset
-    --login
-    --register
-    --verify
-- houses
-    -- create
+        - email
+        - reset
+    -login
+    -register
+    -verify
+3.2. houses
+    - create
         Create new house filling the fields houseName, locationName, numberOfRooms, numberOfBeds and houseType and add the new house in         the list of all houses
-    -- index
+    - index
         Show the list of all houses
-    -- edit
+    - edit
         Change some information for the current house
-    -- show
+    - show
         Show only the information about the current house
-    -- search
+    - search
         Searching house of all houses
     We've got the opportunity to delete a choosen house and the information about it
 
-- images
-    -- create
+3.3. images
+    - create
         Add new image and give it a name
-    -- index
+    - index
         Show the list of all images
 
-- locations
-    -- create
+3.4. locations
+    - create
         Create new location filling the field locationName and add the new location in the list of all locations
-    -- index
+    - index
         Show the list of all locations
-    -- edit
+    - edit
         Change some information for the current location
-    -- show
+    - show
         Show only the information about the current location
     We've got the opportunity to delete a choosen location and the information about it
 
-- types
-    -- create
+3.5. types
+    - create
         Create new house type filling the field houseType and add the new type in the list of all types
-    -- index
+    - index
         Show the list of all types
-    -- edit
+    - edit
         Change some information for the current type
-    -- show
+    - show
         Show only the information about the current type
     We've got the opportunity to delete a choosen type and the information about it
 
--- home
+- home
     Receiving a message "Welcome to our site!" when you are loged in
--- welcome
+- welcome
     The start up page where we've got a menu whith HOUSES, LOCATIONS, HOUSE TYPES, IMAGE buttons
