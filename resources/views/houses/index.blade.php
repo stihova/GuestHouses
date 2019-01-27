@@ -50,7 +50,7 @@
     </style>
 </head>
 <body>
-<h1>INDEX</h1>
+<h1>Houses</h1>
 <div class="panel-heading">
     <a class="btn btn-small btn-info" href="{{ URL::to('houses/create') }}">Create a House</a>
 </div>
@@ -67,13 +67,8 @@
     </div>
 </form>
 <br>
-<td>
-    @if (Auth::check())
-        <a class="btn btn-small btn-info" href="{{ URL::to('images') }}"> <span>Images</span></a>
-    @endif
-</td>
-<table class="table-bordered">
-    <thead class="thead-dark">
+<table class="table table-striped table-bordered">
+    <thead style="background-color: #dd99ff">
     <tr>
         <th>ID</th>
         <th>House Name</th>

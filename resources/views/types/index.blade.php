@@ -50,14 +50,14 @@
     </style>
 </head>
 <body>
-<h1>INDEX</h1>
+<h1>House Types</h1>
 <div class="panel-heading">
     <a class="btn btn-small btn-info" href="{{ URL::to('types/create') }}">Create a House Type</a>
 </div>
 <br>
 
-<table class="table-bordered">
-    <thead class="thead-dark">
+<table class="table table-striped table-bordered">
+    <thead style="background-color: #dd99ff">
     <tr>
         <th>ID</th>
         <th>House Type</th>

@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
+                    <h1>Images</h1>
                     <div class="panel-heading">
-                        Images
-                        <a href="{{ URL::to('images/create') }}" class="pull-right">Add Image</a>
+                        <a class="btn btn-small btn-info" href="{{ URL::to('images/create') }}">Add Image</a>
                     </div>
 
                     <div class="panel-body">
@@ -17,7 +17,7 @@
                         @endif
 
                         <table class="table table-striped table-bordered">
-                            <thead>
+                            <thead  style="background-color: #dd99ff">
                             <tr>
                                 <td>ID</td>
                                 <td>Name</td>
