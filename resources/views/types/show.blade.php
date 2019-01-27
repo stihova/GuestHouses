@@ -18,7 +18,7 @@
             height: 100vh;
             margin: 0;
         }
-        
+
         .links > a {
             padding: 0 25px;
             font-size: 13px;
