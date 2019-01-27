@@ -6,9 +6,11 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <h1>Images</h1>
+                    @if (Auth::check())
                     <div class="panel-heading">
                         <a class="btn btn-small btn-info" href="{{ URL::to('images/create') }}">Add Image</a>
                     </div>
+                    @endif
 
                     <div class="panel-body">
                         <!-- will be used to show any messages -->
@@ -32,6 +34,8 @@
                                     <td>{{ $value->imageDescription }}</td>
                                     <td><img src="<?php echo asset('storage/sample-images/' . $value->fileName);?>" alt="image" /></td>
                                     <!-- we will also add show, edit, and delete buttons -->
+
+                                    @if (Auth::check())
                                     <td>
 
                                         <form action="{{action('ImageController@destroy', $value->id )}}" method="post">
@@ -39,8 +43,9 @@
                                             <input name="_method" type="hidden" value="DELETE">
                                             <button class="btn btn-danger" type="submit">Delete</button>
                                         </form>
-
                                     </td>
+                                    @endif
+
                                 </tr>
                             @endforeach
                             </tbody>

@@ -19,26 +19,6 @@
             margin: 0;
         }
 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
         .links > a {
             padding: 0 25px;
             font-size: 13px;
@@ -51,7 +31,7 @@
     </style>
 </head>
 <body>
-<h1>INDEX</h1>
+<h1>Locations</h1>
 <div class="panel-body">
     <div class="row">
         <div class="col-lg-12 margin-tb">

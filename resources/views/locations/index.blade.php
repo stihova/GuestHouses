@@ -19,26 +19,6 @@
             margin: 0;
         }
 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
         .links > a {
             padding: 0 25px;
             font-size: 13px;
@@ -52,9 +32,12 @@
 </head>
 <body>
 <h1>Locations</h1>
+@if (Auth::check())
 <div class="panel-heading">
     <a class="btn btn-small btn-info" href="{{ URL::to('locations/create') }}">Create a Location</a>
 </div>
+@endif
+
 <br>
 
 <table class="table table-striped table-bordered">
@@ -73,6 +56,8 @@
             <td>
                 <a class="btn btn-primary btn-red" href="{{ route('locations.show', $value->id) }}" method="POST">Show</a>
             </td>
+
+            @if (Auth::check())
             <td>
                 <a class="btn btn-small btn-info" href="{{ URL::to('locations/' . $value->id . '/edit') }}">Edit</a>
             </td>
@@ -83,6 +68,7 @@
                     <button class="btn btn-danger" type="submit">Delete</button>
                 </form>
             </td>
+            @endif
 
         </tr>
     @endforeach

@@ -19,26 +19,6 @@
             margin: 0;
         }
 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
         .links > a {
             padding: 0 25px;
             font-size: 13px;
@@ -51,10 +31,14 @@
 </head>
 <body>
 <h1>Houses</h1>
+@if (Auth::check())
 <div class="panel-heading">
     <a class="btn btn-small btn-info" href="{{ URL::to('houses/create') }}">Create a House</a>
 </div>
+@endif
+
 <br>
+
 <form action="{{action("SearchController@searchHouses")}}" method="POST" role="search">
     {{ csrf_field() }}
     <div class="input-group">
@@ -91,6 +75,8 @@
             <td>
                 <a class="btn btn-primary btn-red" href="{{ route('houses.show', $value->id) }}" method="POST">Show</a>
             </td>
+
+            @if (Auth::check())
             <td>
                 <a class="btn btn-small btn-info" href="{{ URL::to('houses/' . $value->id . '/edit') }}">Edit</a>
             </td>
@@ -101,6 +87,7 @@
                     <button class="btn btn-danger" type="submit">Delete</button>
                 </form>
             </td>
+            @endif
 
         </tr>
     @endforeach
