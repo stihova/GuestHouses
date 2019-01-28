@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class LocationController extends Controller
 {
+    public function _construct()
+    {
+        $this->middleware('auth',['except'=>['index', 'show']]);
+    }
+
     public function index()
     {
         $locationModel = new Location();

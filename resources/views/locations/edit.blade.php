@@ -7,28 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Guest Houses</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <style>
-        html, body {
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .links > a {
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-    </style>
 </head>
 <body>
 <h1>Edit</h1>
@@ -45,9 +23,10 @@
     <form method="post" action="{{action('LocationController@update' , $id )}}">
         <div class="form-group row">
             {{csrf_field()}}
+            <input name="_method" type = "hidden" value = "PATCH">
             <label for="locationName" class="col-sm-2 col-form-label col-form-label-lg">Location Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" placeholder="Enter location:" name="locationName" value="{{$location->locationName}}">
+                <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" placeholder="Enter name:" name="locationName" value="{{$location->locationName}}">
             </div>
         </div>
         <div class="form-group row">

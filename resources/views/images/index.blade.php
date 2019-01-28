@@ -32,7 +32,7 @@
                                 <tr>
                                     <td>{{ $value->id }}</td>
                                     <td>{{ $value->imageDescription }}</td>
-                                    <td><img src="<?php echo asset('storage/sample-images/' . $value->fileName);?>" alt="image" /></td>
+                                    <td><img style="width: 300px; height: 200px" src="<?php echo asset('storage/sample-images/' . $value->fileName);?>" alt="image" /></td>
                                     <!-- we will also add show, edit, and delete buttons -->
 
                                     @if (Auth::check())

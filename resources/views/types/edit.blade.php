@@ -7,28 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Guest Houses</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <style>
-        html, body {
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .links > a {
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-    </style>
 </head>
 <body>
 <h1>Edit</h1>
@@ -42,12 +20,13 @@
             </ul>
         </div>
     @endif
-    <form method="post" action="{{url('/types')}}">
+    <form method="post" action="{{action('TypeController@update' , $id )}}">
         <div class="form-group row">
             {{csrf_field()}}
-            <label for="houseType" class="col-sm-2 col-form-label col-form-label-lg">House Type</label>
+            <input name="_method" type = "hidden" value = "PATCH">
+            <label for="houseType" class="col-sm-2 col-form-label col-form-label-lg">Type Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" placeholder="Enter house type:" name="houseType">
+                <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" placeholder="Enter name:" name="houseType" value="{{$type->houseType}}">
             </div>
         </div>
         <div class="form-group row">
